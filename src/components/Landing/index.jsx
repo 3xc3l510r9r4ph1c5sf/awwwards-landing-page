@@ -45,13 +45,13 @@ export default function Home() {
     gsap.set(firstText.current, {xPercent: xPercent})
     gsap.set(secondText.current, {xPercent: xPercent})
     requestAnimationFrame(animate);
-    xPercent += 0.07 * direction;
+    xPercent += 0.035 * direction;
   }
 
   return (
     <motion.main variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
       <Image 
-        src="/images/background.jpg"
+        src="https://dpbtfxyybppbzesnsbrr.supabase.co/storage/v1/object/public/hh//bd7aa4f4eb8fc0956f337f66ff5bc08bc0cc4ab62e30b83ffac8ac3346e54867-fotor-20250527131624.png"
         fill={true}
         alt="background"
       />
