@@ -1,8 +1,12 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Inter, Fredoka } from 'next/font/google'
 import Header from '../components/Header';
 
 const inter = Inter({ subsets: ['latin'] })
+const fredoka = Fredoka({ 
+  subsets: ['latin'],
+  weight: ['700']
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -13,6 +17,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <style jsx global>{`
+          .fredoka-bold {
+            font-family: ${fredoka.style.fontFamily};
+            font-weight: 700;
+          }
+        `}</style>
         <Header />
         {children}
       </body>

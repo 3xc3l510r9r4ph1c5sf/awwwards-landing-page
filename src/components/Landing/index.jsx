@@ -40,7 +40,7 @@ export default function Home() {
     gsap.set(firstText.current, {xPercent: xPercent})
     gsap.set(secondText.current, {xPercent: xPercent})
     requestAnimationFrame(animate);
-    xPercent += 0.1 * direction;
+    xPercent += 0.07 * direction;
   }
 
   return (
@@ -52,8 +52,8 @@ export default function Home() {
       />
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
-          <p ref={firstText}>Freelance Developer -</p>
-          <p ref={secondText}>Freelance Developer -</p>
+          <p ref={firstText} className="fredoka-bold">Love & Light Yoga & Wellness -</p>
+          <p ref={secondText} className="fredoka-bold">Love & Light Yoga & Wellness -</p>
         </div>
       </div>
       <div data-scroll data-scroll-speed={0.1} className={styles.description}>
