@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image'
+import { Fredoka } from 'next/font/google'
 import styles from './style.module.scss'
 import { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
@@ -7,6 +8,10 @@ import { ScrollTrigger } from 'gsap/all';
 import { slideUp } from './animation';
 import { motion } from 'framer-motion';
 
+const fredoka = Fredoka({ 
+  subsets: ['latin'],
+  weight: ['700']
+})
 export default function Home() {
 
   const firstText = useRef(null);
@@ -52,8 +57,8 @@ export default function Home() {
       />
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
-          <p ref={firstText} className="fredoka-bold">Love & Light Yoga & Wellness -</p>
-          <p ref={secondText} className="fredoka-bold">Love & Light Yoga & Wellness -</p>
+          <p ref={firstText} className={fredoka.className}>Love & Light Yoga & Wellness -</p>
+          <p ref={secondText} className={fredoka.className}>Love & Light Yoga & Wellness -</p>
         </div>
       </div>
       <div data-scroll data-scroll-speed={0.1} className={styles.description}>
